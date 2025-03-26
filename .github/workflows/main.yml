@@ -21,7 +21,7 @@ jobs:
        
     - name: Install dependencies
       run: dotnet restore 
-       working-directory:[ './CI_CD/ListLibrary/','./CI_CD/ListTest/' ]
+       working-directory:'./CI_CD/ListLibrary/' 
       
       
       
