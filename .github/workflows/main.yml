@@ -21,7 +21,7 @@ jobs:
        
     - name: Install dependencies
       run: dotnet restore 
-      working-directory: src/CI-CD/ListLibrary
+      working-directory: src\ListLibrary
       
     - name: Build
       run: dotnet build --configuration Release --no-restore
