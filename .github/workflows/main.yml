@@ -17,13 +17,13 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
       with: 
-         dotnet-version: 8.0.400
+         dotnet-version: 9.0.102
        
     - name: Install dependencies
       run: dotnet restore 
       
     - name: Build
-      run: dotnet build  --no-restore
-    
+      run: dotnet build --configuration Release --no-restore
+  
     - name: Test
-      run: dotnet test --no-build
+      run: dotnet test --no-restore --verbosity normal
