@@ -1,0 +1,22 @@
+name: Build
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - name: Install 
+        run: npm install
+
+      - name: Run Test 
+        run: npm run test
+
+      - name: Build 
+        run: npm run build
+  
+  
+
