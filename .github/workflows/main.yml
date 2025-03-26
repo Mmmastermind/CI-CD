@@ -21,6 +21,7 @@ jobs:
        
     - name: Install dependencies
       run: dotnet restore 
+      working-directory: src/LibraryList
       
     - name: Build
       run: dotnet build --configuration Release --no-restore
