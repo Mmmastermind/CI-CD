@@ -20,8 +20,8 @@ jobs:
          dotnet-version: 8.0.400
        
     - name: Install dependencies
-      run: dotnet build ListLibrary.sln
-      
+      run: dotnet restore
+      working-directory: ..\..\src\CI-CD\ListLibrary
       
     - name: Build
       run: dotnet build --configuration Release --no-restore
